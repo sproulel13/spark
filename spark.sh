@@ -10,8 +10,10 @@ mv spark-2.1.1-bin-hadoop2.7.tgz spark
 cd ./spark
 export SPARK_DIR=$(pwd)
 pip3 install findspark
+export PATH=$PATH:~/.local/bin/
 jupyter notebook --generate-config
 mkdir certs
 cd ./certs
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
+
 
